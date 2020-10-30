@@ -1,0 +1,48 @@
+<div class="container">
+<div *ngIf="user">
+    <h2 class="page-header">{{user.name}}</h2>
+    <!--<ul class="list-group"></ul>
+    <li class="list-group-item">Username:{{user.username}}</li>
+    <li class="list-group-item">E-mail:{{user.email}}</li>1-->
+<div class="d-flex justify-content-center">
+    <form class="form-group">
+    <div class="form-control">
+        <label>BOARD  </label>
+    <select name="board" [(ngModel)]="formDetails.board">
+        <option value="CBSE">CBSE</option>
+        <option value="ICSE">ICSE</option>
+    </select>
+    </div>
+    <div class="form-control" >
+        <label>CLASS  </label>
+        <select name="class" [(ngModel)]="formDetails.class">
+           <option value="10">Class 10</option>
+            <option value="12">Class 12</option>
+            </select>
+    </div>
+    <div class="form-control">
+        <label>SUBJECT  </label>
+        <select name="subject" [(ngModel)]="formDetails.subject">
+            <option value="maths">Mathematics</option>
+        </select>
+    </div>
+    <div class="form-control">
+        <label>CHAPTERS</label>
+        <select name="Chapters" [(ngModel)]="formDetails.chapter">
+            <option>Real Numbers</option>
+            <option>Polynomials</option>
+            <option>Pair Of Linear Equations</option>
+            <option>Quadratic</option>
+            <option>Polynomials</option>
+            <option>Arithmetic Progression</option>
+            <option>Triangles</option>
+            <option>C0-Ordinate Geometry</option>
+            <option>Trignomenty</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" (click)="displayDetails()">PROCEED</button>
+</form>
+</div>
+</div>
+</div>
+<router-outlet></router-outlet>
